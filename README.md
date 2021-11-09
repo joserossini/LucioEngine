@@ -10,7 +10,7 @@ In progress, basic cross-plataform 3D game engine.
 ## Start
 #####First we clone the repository and submodules.
 ```bach
-git clone git@github.com:joserossini/lucio.git
+git clone https://github.com/joserossini/lucioengine.git
 git submodule update --init --recursive
 ```
 
