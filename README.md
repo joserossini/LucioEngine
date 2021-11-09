@@ -3,7 +3,7 @@
 In progress, basic cross-plataform 3D game engine.
 
 
-![Image](snip.gif "Sandbox")
+![Image](https://github.com/joserossini/lucioengine/blob/main/snip.GIF "Sandbox")
 
 ---
 
