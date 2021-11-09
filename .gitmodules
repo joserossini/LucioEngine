@@ -1,0 +1,18 @@
+[submodule "submodules/sdl"]
+	path = submodules/sdl
+	url = https://github.com/spurious/SDL-mirror
+[submodule "submodules/nuklear"]
+	path = submodules/nuklear
+	url = https://github.com/vurtun/nuklear
+[submodule "submodules/gli"]
+	path = submodules/gli
+	url = https://github.com/g-truc/gli
+[submodule "submodules/glm"]
+	path = submodules/glm
+	url = https://github.com/g-truc/glm
+[submodule "submodules/glew"]
+	path = submodules/glew
+	url = https://github.com/Perlmint/glew-cmake
+[submodule "submodules/stb"]
+	path = submodules/stb
+	url = https://github.com/nothings/stb
