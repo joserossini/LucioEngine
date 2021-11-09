@@ -5,7 +5,6 @@ In progress, basic cross-plataform 3D game engine.
 
 ![Image](https://github.com/joserossini/lucioengine/blob/main/snip.GIF "Sandbox")
 
----
 
 ## Start
 First we clone the repository and submodules.
