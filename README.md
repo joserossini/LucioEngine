@@ -8,18 +8,18 @@ In progress, basic cross-plataform 3D game engine.
 ---
 
 ## Start
-#####First we clone the repository and submodules.
+First we clone the repository and submodules.
 ```bach
 git clone https://github.com/joserossini/lucioengine.git
 git submodule update --init --recursive
 ```
 
-#####Then we generate the project files.
+Then we generate the project files.
 For Windows we can use the `build.bat` file to generate VisualStudio project, or you can manually do it.
 ```bash 
 cmake -G "Visual Studio 16 2019" ..
 ```
-#####Finaly we can work with it.
+Finaly we can work with it.
 We can just open VisualStudio. It will take a while to compile for the first time since we are also compiling all the submodules.
 
 ---
