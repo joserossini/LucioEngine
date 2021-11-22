@@ -1,10 +1,10 @@
 #include "event.hpp"
 
-#include "engine/input/callBack.hpp"
+#include "callBack.hpp"
 #include <SDL.h>
 
 lucio::Event::Event():
-	_eventMap(new std::unordered_map<uint32_t, CallBack<void, SDL_Event&>*>)
+	_eventMap(new std::map<uint32_t,std::shared_ptr<CallBack<void,SDL_Event&>>>)
 {
 }
 

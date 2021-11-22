@@ -14,8 +14,8 @@ namespace lucio {
 	class Shader {
 
 		public:
-			Shader(const std::string & vfilepath, const std::string & ffilepath);
-			Shader(const char & vsource, const char & fsource, const int & vsize, const int & fsize);
+			Shader(const std::string &vfilepath, const std::string &ffilepath);
+			Shader(const char &vsource, const char &fsource, const int &vsize, const int &fsize);
 			~Shader();
 
 			void bind() const;
@@ -26,8 +26,8 @@ namespace lucio {
 
 		private:
 
-			inline void compileShader(GLuint * id, const char & src,const int & size,const GLenum type);
-			inline void linkShaders(GLuint & vid, GLuint & fid);
+			inline void compileShader(GLuint *id, const char *src, const int &size, const GLenum type);
+			inline void linkShaders(GLuint &vid, GLuint &fid);
 
 			void checkStatus(GLuint & id, const GLenum type);
 

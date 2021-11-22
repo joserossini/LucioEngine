@@ -2,7 +2,7 @@
 
 #include "GL/glew.h"
 
-#include "engine/common.hpp"
+#include "lucio/common.hpp"
 
 namespace lucio {
 

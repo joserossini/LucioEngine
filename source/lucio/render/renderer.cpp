@@ -1,6 +1,6 @@
 #include "renderer.hpp"
 
-#include "engine/application/window.hpp"
+#include "lucio/core/window.hpp"
 #include <GL/glew.h>
 
 lucio::Renderer::Renderer(Window & window):

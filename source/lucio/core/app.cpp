@@ -1,12 +1,12 @@
 #include "app.hpp"
 
 #include "window.hpp"
-#include "engine/input/callback.hpp"
-#include "engine/input/event.hpp"
-#include "engine/graphics/renderer.hpp"
-#include "engine/graphics/shader.hpp"
-#include "engine/graphics/mesh.hpp"
-#include "engine/graphics/vertex.hpp"
+#include "callback.hpp"
+#include "event.hpp"
+#include "lucio/render/renderer.hpp"
+#include "lucio/render/shader.hpp"
+#include "lucio/render/mesh.hpp"
+#include "lucio/render/vertex.hpp"
 
 #include <SDL.h>
 #include <functional>

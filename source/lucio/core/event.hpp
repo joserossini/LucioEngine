@@ -1,10 +1,11 @@
 #pragma once
 
-#include <unordered_map>
+#include <memory>
+#include <map>
 #include <functional>
 #include <tuple>
 
-#include "engine/common.hpp"
+#include "lucio/common.hpp"
 
 namespace lucio {
 
@@ -23,7 +24,7 @@ namespace lucio {
 			void run();
 
 		private:
-			std::unordered_map<uint32_t, CallBack<void,SDL_Event&>*> * _eventMap;
+			std::map<uint32_t, std::shared_ptr<CallBack<void,SDL_Event&>>> * _eventMap;
 
 	};
 	

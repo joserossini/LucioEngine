@@ -1,20 +1,20 @@
 #include "shader.hpp"
 
-#include "engine/util/fileReader.hpp"
+#include "lucio/util/fileReader.hpp"
 #include <GL/GL.h>
 
 
-lucio::Shader::Shader(const std::string & vfilepath, const std::string & ffilepath):
+lucio::Shader::Shader(const std::string &vfilepath, const std::string &ffilepath):
 	_program(glCreateProgram())
 {
 	GLuint vid;
 	GLuint fid;
 
-	FileReader vfile(vfilepath);
-	FileReader ffile(ffilepath);
+	auto vdata = FileReader::GetDataFrom(vfilepath);
+	auto fdata = FileReader::GetDataFrom(ffilepath);
 
-	compileShader(&vid, vfile.getData(), vfile.getSize(), GL_VERTEX_SHADER);
-	compileShader(&fid, ffile.getData(), vfile.getSize(), GL_FRAGMENT_SHADER);
+	compileShader(&vid, vdata.c_str(), vdata.size(), GL_VERTEX_SHADER);
+	compileShader(&fid, fdata.c_str(), vdata.size(), GL_FRAGMENT_SHADER);
 
 	linkShaders(vid, fid);
 
@@ -29,8 +29,8 @@ lucio::Shader::Shader(const char & vsource, const char & fsource, const int & vs
 	GLuint vid;
 	GLuint fid;
 
-	compileShader(&vid, vsource, vsize, GL_VERTEX_SHADER);
-	compileShader(&fid, fsource, fsize, GL_FRAGMENT_SHADER);
+	compileShader(&vid, (char*)vsource, vsize, GL_VERTEX_SHADER);
+	compileShader(&fid, (char*)fsource, fsize, GL_FRAGMENT_SHADER);
 
 	linkShaders(vid, fid);
 
@@ -48,19 +48,18 @@ void lucio::Shader::bind() const
 	glUseProgram(_program);
 }
 
-inline void lucio::Shader::compileShader(GLuint * id, const char & src,const GLint & size, const GLenum type)
+inline void lucio::Shader::compileShader(GLuint * id, const char *src,const int &size, const GLenum type)
 {
 	*id = glCreateShader(type);
 
-	const char * p_src = &src;
-
-	glShaderSource(*id, 1, &p_src, &size);
+	glShaderSource(*id, 1, &src, &size);
 
 	glCompileShader(*id);
 
 	checkStatus(*id, GL_COMPILE_STATUS);
 
 }
+
 
 inline void lucio::Shader::linkShaders(GLuint & vid, GLuint & fid)
 {
@@ -88,7 +87,7 @@ void lucio::Shader::checkStatus(GLuint & id, GLenum type)
 	return;
 }
 
-void lucio::Shader::setUniform(GLint location, float value)
+void lucio::Shader::setUniform(GLint location, GLfloat value)
 {
 	glProgramUniform1f(_program, location, value);
 }

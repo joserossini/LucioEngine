@@ -1,6 +1,6 @@
 #include "mesh.hpp"
 
-#include "engine/graphics/vertex.hpp"
+#include "vertex.hpp"
 
 lucio::Mesh::Mesh(vertex_t * vertices, unsigned int vertSize, unsigned int * indeces, unsigned int indeSize)
 {

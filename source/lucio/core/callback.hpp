@@ -17,9 +17,9 @@ namespace lucio {
 	*
 	*	Note: Can also be use whit std::bind"
 	*/
-	
+
 	template <typename T, typename... Args>
-	class CallBack {
+	class CallBack{
 
 		public:
 			CallBack(std::function<T(Args...)> func) : _func(func) {};
