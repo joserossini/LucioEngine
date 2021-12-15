@@ -24,6 +24,7 @@ lucio::App::App():
 
 lucio::App::~App()
 {
+	
 	delete (_event);
 	delete (_window);
 	delete (_renderer);

@@ -2,7 +2,7 @@
 
 struct SDL_Window;
 typedef void * SDL_GLContext;
-typedef union SDL_Event;
+union SDL_Event;
 
 namespace lucio{
 

@@ -31,5 +31,5 @@ void lucio::Renderer::clear() const
 void lucio::Renderer::render()
 {
 	glFlush();
-	_window.swapBuffer();\
+	_window.swapBuffer();
 }

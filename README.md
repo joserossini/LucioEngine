@@ -1,28 +1,23 @@
 # Lucio Engine
 
-In progress, basic cross-plataform 3D game engine.
-
-
-![Image](snip.gif "Sandbox")
+In progress, basic cross-plataform 3D graphics engine.
 
 ---
 
-## Start
-#####First we clone the repository and submodules.
+## Building project files
+First we clone the repository and submodules.
 ```bach
 git clone git@github.com:joserossini/lucio.git
 git submodule update --init --recursive
 ```
 
-#####Then we generate the project files.
+Then we generate the project files.
 For Windows we can use the `build.bat` file to generate VisualStudio project, or you can manually do it.
 ```bash 
-cmake -G "Visual Studio 16 2019" ..
+cmake -G "Visual Studio 17 2022" ..
 ```
-#####Finaly we can work with it.
+Finaly we can work with it.
 We can just open VisualStudio. It will take a while to compile for the first time since we are also compiling all the submodules.
-
----
 
 ## Submodules
 * sdl2 
