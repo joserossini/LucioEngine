@@ -1,6 +1,3 @@
-[submodule "submodules/sdl"]
-	path = submodules/sdl
-	url = https://github.com/spurious/SDL-mirror
 [submodule "submodules/nuklear"]
 	path = submodules/nuklear
 	url = https://github.com/vurtun/nuklear
