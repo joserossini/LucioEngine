@@ -3,6 +3,8 @@
 #include <string>
 #include "GL/glew.h"
 
+using namespace std;
+
 namespace lucio {
 
 	/*
@@ -14,7 +16,7 @@ namespace lucio {
 	class Shader {
 
 		public:
-			Shader(const std::string &vfilepath, const std::string &ffilepath);
+			Shader(const string &vfilepath, const string &ffilepath);
 			Shader(const char &vsource, const char &fsource, const int &vsize, const int &fsize);
 			~Shader();
 

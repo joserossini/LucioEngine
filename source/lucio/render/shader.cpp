@@ -1,7 +1,7 @@
 #include "shader.hpp"
 
-#include "lucio/util/fileReader.hpp"
-#include <GL/GL.h>
+#include "lucio/util/filereader.hpp"
+#include <GL/gl.h>
 
 
 lucio::Shader::Shader(const std::string &vfilepath, const std::string &ffilepath):
@@ -29,8 +29,8 @@ lucio::Shader::Shader(const char & vsource, const char & fsource, const int & vs
 	GLuint vid;
 	GLuint fid;
 
-	compileShader(&vid, (char*)vsource, vsize, GL_VERTEX_SHADER);
-	compileShader(&fid, (char*)fsource, fsize, GL_FRAGMENT_SHADER);
+	compileShader(&vid, &vsource, vsize, GL_VERTEX_SHADER);
+	compileShader(&fid, &fsource, fsize, GL_FRAGMENT_SHADER);
 
 	linkShaders(vid, fid);
 

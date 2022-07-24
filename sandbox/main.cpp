@@ -6,12 +6,11 @@
 #include <lucio/render/shader.hpp>
 #include <lucio/render/texture.hpp>
 
-
 int main()
 { 
 	lucio::App myApp = lucio::App();
 
-	std::string assetPath = "../../../Sandbox/asset/";
+	std::string assetPath = "../../sandbox/asset/";
 	
 	// Load Vertecis & Shaders
 	lucio::vertex_t vertices[] = {						// Position, 						Color, 				TextureCoords

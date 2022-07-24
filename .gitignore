@@ -2,4 +2,5 @@ build/
 _build/
 .vs/
 .vscode/
+.kdev4/
 out/

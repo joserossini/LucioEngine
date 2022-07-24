@@ -1,4 +1,4 @@
-#include "fileReader.hpp"
+#include "filereader.hpp"
 #include <fstream>
 
 std::string lucio::FileReader::GetDataFrom(const std::string& path)
@@ -31,5 +31,6 @@ std::string lucio::FileReader::GetDataFrom(const std::string& path)
 	{
 		printf("\tERROR! -> Fail to succesfully read %s: %s", path.c_str(), exception.what());
 	}
+	return "";
 
 }

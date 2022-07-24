@@ -1,17 +1,20 @@
+## Boost:ext di ##
+add_subdirectory("boost-ext-di" EXCLUDE_FROM_ALL)
+
 ## SDL2 ##
 set(SDL_STATIC ON)
 set(SDL_SHARED OFF)
-add_subdirectory(sdl)
+add_subdirectory(sdl2 EXCLUDE_FROM_ALL)
 
-## GLM ##
-add_subdirectory(glm)
+## GLM ##+
+add_subdirectory(glm EXCLUDE_FROM_ALL)
 
 ## GLI ##
-add_subdirectory(gli)
+add_subdirectory(gli EXCLUDE_FROM_ALL)
 
 
 ## GLEW ##
-add_subdirectory(glew/build/cmake)
+add_subdirectory(glew/build/cmake EXCLUDE_FROM_ALL)
 
 # TODO Replace nuklear with imgui
 ## NUKLEAR ##

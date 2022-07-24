@@ -20,3 +20,7 @@ namespace lucio{
 	struct view_t;
 	struct perspective_t;
 }
+
+namespace lucio::util{
+    class FileManager;
+}

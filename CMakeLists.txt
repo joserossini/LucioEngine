@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.22.1)
 
 project(Lucio VERSION 0.0.1 LANGUAGES C CXX)
 
@@ -47,6 +47,7 @@ target_link_libraries(Lucio
     gli
     glm
     stb_image
+    Boost.DI
     )
 
 target_include_directories(Lucio PUBLIC
@@ -57,6 +58,7 @@ target_include_directories(Lucio PUBLIC
     ${SUBMODULES_DIR}/glm
     ${SUBMODULES_DIR}/gli
     ${SUBMODULES_DIR}/stb
+    ${SUBMODULES_DIR}/"boost-ext-di"/include
     )
 
 add_subdirectory(sandbox)

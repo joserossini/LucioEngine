@@ -8,7 +8,9 @@
 lucio::Window::Window(const char* title, const int width, const int height)
 {
     if(SDL_Init(SDL_INIT_VIDEO) != 0)
+    {
         throw "SDL Video Fail to Initilize";
+    }
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4); 
@@ -45,8 +47,6 @@ lucio::Window::~Window()
     SDL_GL_DeleteContext(&_glcontext);
     SDL_DestroyWindow(_window);
     SDL_Quit();
-
-    delete(_glcontext);
 }
 
 SDL_GLContext lucio::Window::getSDLGLContext() const
