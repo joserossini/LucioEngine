@@ -16,3 +16,6 @@
 [submodule "submodules/boost-ext-di"]
 	path = submodules/boost-ext-di
 	url = https://github.com/boost-ext/di
+[submodule "submodules/sdl"]
+	path = submodules/sdl
+	url = https://github.com/libsdl-org/SDL
