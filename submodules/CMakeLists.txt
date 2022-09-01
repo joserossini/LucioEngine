@@ -4,7 +4,7 @@ add_subdirectory("boost-ext-di" EXCLUDE_FROM_ALL)
 ## SDL2 ##
 set(SDL_STATIC ON)
 set(SDL_SHARED OFF)
-add_subdirectory(sdl2 EXCLUDE_FROM_ALL)
+add_subdirectory(sdl EXCLUDE_FROM_ALL)
 
 ## GLM ##+
 add_subdirectory(glm EXCLUDE_FROM_ALL)
